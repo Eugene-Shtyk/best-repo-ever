@@ -1,0 +1,22 @@
+public virtual class Parent {
+    protected String displayRain() {
+        return 'Rain ';
+    }
+    private String displaySun() {
+        return 'Sun ';
+    }
+}
+
+public class Child extends Parent {
+    private String displaySnow() {
+        return 'Snow ';
+    }
+    public String displayFog() {
+        return 'Fog ';
+    }
+    public String displayWeather() {
+        String concatinate = displaySnow() + displayFog() + displaySun() + displayRain();
+        System.debug(concatinate);
+        return concatinate;
+    } 
+}
